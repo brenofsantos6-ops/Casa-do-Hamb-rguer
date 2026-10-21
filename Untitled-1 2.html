@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa do Hambúrguer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Casa do Hambúrguer</h1>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="area-carrinho">
+            <button id="botaoCarrinho" class="botao-carrinho" type="button">
+                Carrinho (<span id="quantidadeCarrinho">0</span>)
+            </button>
+
+            <section id="painelCarrinho" class="carrinho fechado">
+                <h2>Seu carrinho</h2>
+                <div id="itensCarrinho"></div>
+
+                <p class="total-carrinho">
+                    Total: <strong id="totalCarrinho">R$ 0,00</strong>
+                </p>
+
+                <button id="botaoFinalizar" class="botao-finalizar" type="button">
+                    Finalizar compra
+                </button>
+
+                <div id="mensagem" class="mensagem"></div>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="inicio">
+            <img class="imagem-inicio" src="hambur.gif" alt="Animação de hambúrguer">
+
+            <div class="texto-inicio">
+                <p class="destaque">SABOR DE VERDADE</p>
+                <h2>O melhor hambúrguer do Limoeiro</h2>
+                <p>
+                    Hambúrguer artesanal preparado com ingredientes
+                    selecionados para deixar seu dia mais saboroso.
+                </p>
+                <a href="#cardapio" class="botao-principal">Ver cardápio</a>
+            </div>
+        </section>
+
+        <section id="cardapio" class="cardapio">
+            <div class="titulo-secao">
+                <p>ESCOLHA O SEU</p>
+                <h2>Nosso Cardápio</h2>
+            </div>
+
+            <div class="produtos">
+
+                <div class="produto">
+                    <img src="hamburger.jpg" alt="Hambúrguer Normal">
+                    <div class="produto-info">
+                        <h3>Hambúrguer Normal</h3>
+                        <p>Hambúrguer com queijo, salada e molho especial.</p>
+                        <div class="produto-final">
+                            <strong>R$ 20,00</strong>
+                            <button class="botao-adicionar" data-nome="Hambúrguer Normal" data-preco="20.00" type="button">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto">
+                    <img src="X-Bacon.jpeg" alt="X-Bacon">
+                    <div class="produto-info">
+                        <h3>X-Bacon</h3>
+                        <p>Hambúrguer com queijo e bacon.</p>
+                        <div class="produto-final">
+                            <strong>R$ 25,00</strong>
+                            <button class="botao-adicionar" data-nome="X-Bacon" data-preco="25.00" type="button">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto">
+                    <img src="x-salada-classico.png" alt="X-Salada">
+                    <div class="produto-info">
+                        <h3>X-Salada</h3>
+                        <p>Hambúrguer com queijo, alface, tomate e molho.</p>
+                        <div class="produto-final">
+                            <strong>R$ 23,00</strong>
+                            <button class="botao-adicionar" data-nome="X-Salada" data-preco="23.00" type="button">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto">
+                    <img src="X-Tudo.jpg" alt="X-Tudo">
+                    <div class="produto-info">
+                        <h3>X-Tudo</h3>
+                        <p>Hambúrguer com queijo, presunto, bacon, ovo e salada.</p>
+                        <div class="produto-final">
+                            <strong>R$ 30,00</strong>
+                            <button class="botao-adicionar" data-nome="X-Tudo" data-preco="30.00" type="button">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto">
+                    <img src="Suco de Maracujá.webp" alt="Suco Natural">
+                    <div class="produto-info">
+                        <h3>Suco Natural</h3>
+                        <p>Suco de Maracujá.</p>
+                        <div class="produto-final">
+                            <strong>R$ 7,00</strong>
+                            <button class="botao-adicionar" data-nome="Suco Natural" data-preco="7.00" type="button">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto">
+                    <img src="Coca-Cola.avif" alt="Refrigerante">
+                    <div class="produto-info">
+                        <h3>Coca-Cola</h3>
+                        <p>Coca-Cola gelada para acompanhar seu lanche.</p>
+                        <div class="produto-final">
+                            <strong>R$ 6,00</strong>
+                            <button class="botao-adicionar" data-nome="Refrigerante" data-preco="6.00" type="button">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contato" class="contato">
+           <h2>Entre em contato</h2>
+<p>Peça seu hambúrguer e aproveite!</p>
+<p>Telefone: (71) 9337-1701</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 Casa do Hambúrguer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

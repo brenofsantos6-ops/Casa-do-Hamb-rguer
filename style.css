@@ -1,0 +1,221 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8e7;
+    color: #222;
+}
+
+.logo {
+    background: #111;
+    color: white;
+    padding: 20px 50px;
+}
+
+.logo h1 { margin: 0; font-size: 28px; }
+
+nav {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover { color: #f5b400; }
+
+#botaoCarrinho, .botao-adicionar {
+    background: #f5b400;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#botaoCarrinho { display: block; margin: 15px 30px 15px auto; }
+
+.area-carrinho { position: relative; }
+
+.carrinho {
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    right: 30px;
+    width: 280px;
+    padding: 15px;
+    background: #f5b400;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.carrinho.fechado { display: none; }
+
+.item-carrinho {
+    background: #fff8e7;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+.total-carrinho { border-top: 1px solid #b8860b; padding-top: 10px; }
+
+.botao-finalizar {
+    width: 100%;
+    padding: 10px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mensagem { color: #287a32; font-weight: bold; }
+
+.inicio {
+    min-height: 550px;
+    padding: 50px 7%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.inicio .imagem-inicio { flex: 0 0 48%; width: 48%; }
+
+.inicio .imagem-inicio img,
+.inicio .imagem-inicio video {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.inicio .texto-inicio { flex: 1; max-width: 550px; }
+
+.destaque, .titulo-secao p {
+    color: #c58d00;
+    font-weight: bold;
+}
+
+.destaque { letter-spacing: 3px; }
+.titulo-secao p { letter-spacing: 2px; }
+
+.texto-inicio h2 {
+    font-size: 48px;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.texto-inicio > p:not(.destaque) {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.botao-principal {
+    display: inline-block;
+    background: #f5b400;
+    color: #111;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao-principal:hover, .botao-adicionar:hover {
+    background: #e0a300;
+}
+
+.cardapio { padding: 70px 8%; }
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-secao h2 { font-size: 38px; margin-top: 5px; }
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.produto {
+    background: white;
+    width: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #ddd;
+    transition: transform .3s;
+}
+
+.produto:hover { transform: translateY(-8px); }
+
+.produto img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produto-info { padding: 20px; }
+.produto-info h3 { font-size: 23px; margin-top: 0; }
+.produto-info p { color: #666; line-height: 1.5; }
+
+.produto-final {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contato { padding: 40px 8%; }
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p { margin: 0; }
+
+@media (max-width: 700px) {
+    .logo { text-align: center; padding: 20px; }
+    nav { gap: 20px; flex-wrap: wrap; }
+
+    .inicio {
+        flex-direction: column;
+        padding: 35px 6%;
+        gap: 25px;
+    }
+
+    .inicio .imagem-inicio { flex: 0 0 auto; width: 100%; }
+    .inicio .imagem-inicio img,
+    .inicio .imagem-inicio video { height: 300px; }
+
+    .inicio .texto-inicio { width: 100%; max-width: none; }
+    .texto-inicio h2 { font-size: 36px; }
+    .cardapio { padding: 45px 6%; }
+
+    .carrinho {
+        right: 0;
+        width: min(280px, calc(100vw - 30px));
+    }
+}
